@@ -56,7 +56,7 @@ public class Main extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e){
 		if("empezar".equals(e.getActionCommand())){
-			MyCalculator calculator = new MyCalculator();
+			MyCalculator calculator = MyCalculator.getInstance();
 	        StackVector<Integer> stack = new StackVector<Integer>();
 	        ArrayList<String> operation = new ArrayList<String>();
 	        int operator = 0;
