@@ -59,4 +59,27 @@ class CircularList<E> extends AbstractList<E>{
             return temp.value();
             }
 
+
+    public CircularList<E> subList(int fromIndex, int toIndex) {
+        Node<E> currentInOriginal = (fromIndex);
+
+        int count = (toIndex - fromIndex) + 1;
+
+        List<L> newSubList = new List<L>();
+        newSubList.head = new Node<L>(current.data);
+
+        Node<L> lastItemInList = newSubList.head;
+        int soFar = 1;
+
+        currentInOriginal = currentInOriginal.next;
+        while(currentInOriginal!=null && soFar<count) {
+            lastItemInList.next = new Node<L>(currentInOriginal.data);
+            listItemInList = lastItemInList.next;
+
+            currentInOriginal=currentInOriginal.next;
+            soFar++;
+        }
+
+        return newSubList;
+    }
 }

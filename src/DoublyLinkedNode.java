@@ -20,4 +20,17 @@ public class DoublyLinkedNode<E> {
     {
         this(v, null, null);
     }
+
+    public void setNext(DoublyLinkedNode<E> objeto) {
+        this.nextElement = objeto;
+    }
+
+    public DoublyLinkedNode<E> getPreviousElement(){
+        return (previousElement);
+    }
+
+    public E getData(){
+        return  data;
+    }
+
 }

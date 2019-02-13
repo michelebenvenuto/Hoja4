@@ -63,19 +63,4 @@ class SinglyLinkedList<E> extends AbstractList<E>{
 
    }
 
-
-   public boolean contains(E value)
-   // pre: value is not null
-   // post: returns true iff value is found in list
-  {
-      Node<E> finger = head;
-
-      while (finger != null &&
-             !finger.value().equals(value))
-     {
-          finger = finger.next();
-      }
-      return finger != null;
-   }
-
 }

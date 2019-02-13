@@ -42,13 +42,13 @@ class DoublyLinkedList<E> extends AbstractList<E>{
     // post: removes value from tail of list
             {
             DoublyLinkedNode<E> temp = tail;
-            tail = tail.previousElement();
+            tail = tail.getPreviousElement();
             if (tail == null) {
             head = null;
             } else {
-            tail.(null);
+            tail.setNext(null);
             }
             count--;
-            return temp.data();
+            return temp.getData();
         }
 }
