@@ -12,6 +12,10 @@ Michele Benevenuto
 Hoja de trabajo 2
 Algoritmos y estructura de datos
 Main con GUI
+
+Nota: Las clases que heredan AbstactList fueron tomadas de los archivos de clase
+y configuradas para realizar los requerimentos necesarios
+
 */
 
 
@@ -80,7 +84,7 @@ public class Main extends JFrame implements ActionListener{
 
 	        /*Aca iria el for*/	
 	        retorno = "\n\n\n\tEntrada \tOperacion \t\t\t\t\t\tPila";
-	        String operationToDo= (String) operation.get(0);
+	        String operationToDo= operation.get(0);
 	        for (int i =0; i<operationToDo.length();i++){
 	        	String currentString=operationToDo.substring(i,i+1);
 	            try {
