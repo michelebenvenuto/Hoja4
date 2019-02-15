@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class ListFactory {
-    //regresa el stack necesario
+    //regresa la lista necesaria
     public List getList(String neededList){
         if (neededList== null){
             return null;
