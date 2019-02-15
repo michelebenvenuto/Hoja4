@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8922da1-9fd9-441b-ad25-b7f1c08932a7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ListFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StackList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StackList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/circular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/circular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/datos.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/singlyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/singlyLinkedList.java" afterDir="false" />
     </list>
     <list id="741fffed-1176-41be-9396-5c1b83e58d4c" name="Default Changelist" comment="" />
@@ -35,15 +30,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9707">
-              <caret line="571" column="12" selection-start-line="571" selection-start-column="12" selection-end-line="571" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StackFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StackFactory.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,11 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singlyLinkedList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="singlyLinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/singlyLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="242">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datos.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/datos.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -150,6 +145,7 @@
         <option value="$PROJECT_DIR$/src/circular.java" />
         <option value="$PROJECT_DIR$/src/singlyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/singlyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/datos.txt" />
       </list>
     </option>
   </component>
@@ -506,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9707">
-          <caret line="571" column="12" selection-start-line="571" selection-start-column="12" selection-end-line="571" selection-end-column="12" />
+        <state relative-caret-position="9928">
+          <caret line="584" column="12" selection-start-line="584" selection-start-column="12" selection-end-line="584" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -567,9 +563,6 @@
           <caret line="10" column="29" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datos.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -656,8 +649,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/singlyLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="242">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
