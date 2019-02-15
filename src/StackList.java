@@ -18,7 +18,7 @@ public class StackList<E> implements Stack<E> {
 
     @Override
     public E peek() {
-        return data.get(size()-1);
+        return data.get(size());
     }
 
     @Override

@@ -120,7 +120,7 @@ class DoublyLinkedList<E> extends AbstractList<E>{
     @Override
     public E get(int i) {
         DoublyLinkedNode<E> finger = head;
-        for (int j=0;j<i;j++){
+        for (int j=0;j<i-1;j++){
             finger = finger.nextElement;
         }
         return finger.getData();

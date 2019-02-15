@@ -73,7 +73,7 @@ class SinglyLinkedList<E> extends AbstractList<E>{
     @Override
     public E get(int i) {
         Node<E> finger = head;
-        for (int j=0;j<i;j++){
+        for (int j=0;j<i-1;j++){
             finger = finger.next();
         }
         return finger.value();

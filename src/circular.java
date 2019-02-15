@@ -74,7 +74,7 @@ class CircularList<E> extends AbstractList<E>{
     @Override
     public E get(int i) {
         Node<E> finger = tail;
-        for (int j=0;j<i+1;j++){
+        for (int j=0;j<i;j++){
             finger = finger.next();
         }
         return finger.value();

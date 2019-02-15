@@ -2,7 +2,7 @@ import java.util.List;
 
 public class ListFactory {
     //regresa la lista necesaria
-    public List getList(String neededList){
+    public AbstractList getList(String neededList){
         if (neededList== null){
             return null;
         }

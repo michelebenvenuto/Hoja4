@@ -40,7 +40,7 @@ public class Main extends JFrame implements ActionListener{
     int stack_index = 0;
     int list_index = 0;
     private String stack_string =  stacks[stack_index];
-    String[] lists = {"SINGLE","DOUBLE","CIRCULAR"};
+    String[] lists = {"SINGLE","DOUBLE","CIRCULAR",null};
     private String list_String = lists[stack_index];
 	/*Definimos los botones*/
     private JButton setStack = new JButton("Cambiar Stack");
@@ -97,14 +97,17 @@ public class Main extends JFrame implements ActionListener{
         }
 		if("empezar".equals(e.getActionCommand())){
 			MyCalculator calculator = MyCalculator.getInstance();
-	        StackVector<Integer> stack = new StackVector<Integer>();
+			StackFactory stackFactory= new StackFactory();
+			ListFactory listFactory = new ListFactory();
+			AbstractList<String> list = listFactory.getList(list_String);
+	        Stack<Integer>stack = stackFactory.getStack(stack_string,list);
 	        ArrayList<String> operation = new ArrayList<String>();
 	        int operator = 0;
 	        int operand = 0;
 
 	        try {//si no es un operando
 	            Stream<String> lines = Files.lines(
-	                    Paths.get("datos.txt"),
+	                    Paths.get("src/datos.txt"),
 	                    StandardCharsets.UTF_8
 	            );
 	            lines.forEach(s ->{
