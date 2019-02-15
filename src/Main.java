@@ -47,8 +47,8 @@ public class Main extends JFrame implements ActionListener{
     private JButton setList = new JButton("Cambiar Lista");
 	private JButton empezar = new JButton("Comenzar");;//boton que permitira que se realice la accion
 	private JTextArea mensaje;
-    private JTextField stack_state = new JTextField();//nos dice el stack preferido
-    private JTextField list_state = new JTextField();//nos dice el list preferido
+    private JTextArea stack_state = new JTextArea();//nos dice el stack preferido
+    private JTextArea list_state = new JTextArea();//nos dice el list preferido
 	private Panel panelEntrada, panelCentro;
 	private JPanel panelDeLaVentana;
 
@@ -59,6 +59,8 @@ public class Main extends JFrame implements ActionListener{
 		mensaje.setBounds(10,50,400,300);
 		mensaje.setPreferredSize(new Dimension(1000,500));//dimensiones
 		empezar.addActionListener(this);
+		setStack.addActionListener(this);
+		setList.addActionListener(this);
 		panelDeLaVentana = (JPanel)this.getContentPane();
 		panelEntrada = new Panel();//los siguientes paneles son para poner orden y estetica
 		panelCentro = new Panel();
@@ -90,8 +92,8 @@ public class Main extends JFrame implements ActionListener{
             if (list_index==3){
                 list_index=0;
             }
-            list_String = stacks[stack_index];
-            list_state.setText(stack_string);
+            list_String = lists[list_index];
+            list_state.setText(list_String);
         }
 		if("empezar".equals(e.getActionCommand())){
 			MyCalculator calculator = MyCalculator.getInstance();
