@@ -1,18 +1,19 @@
-import java.util.List;
+
 
 public class StackList<E> implements Stack<E> {
     //TODO revisar por cambios para utilizar las listas definidas
     public AbstractList<E> data;
 
+    public StackList(AbstractList<E> list){data =list;}
 
     @Override
     public void push(E item) {
-        data.add(item);
+        data.addLast(item);
     }
 
     @Override
     public E pop() {
-        return data.remove(size()-1);
+        return data.removeLast();
     }
 
     @Override

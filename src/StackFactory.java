@@ -1,7 +1,7 @@
 public class StackFactory {
 
     //regresa el stack necesario
-    public Stack getStack(String neededStack){
+    public Stack getStack(String neededStack, AbstractList list){
         if (neededStack== null){
             return null;
         }
@@ -11,9 +11,9 @@ public class StackFactory {
         else if (neededStack.equals("VECTOR")){
             return new StackVector();
         }
-        else if (neededStack.equals("LIST")){
+        else if (neededStack.equals("LIST")&&list!=null){
 
-            return new StackList();
+            return new StackList(list);
         }
         return null;
     }

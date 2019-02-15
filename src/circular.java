@@ -1,3 +1,5 @@
+/*Algnos metodos son tomados de los archivos de la clase*/
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
@@ -65,9 +67,20 @@ class CircularList<E> extends AbstractList<E>{
 
     @Override
     public int size() {
-        return 0;
+        return count;
     }
 
+
+    @Override
+    public E get(int i) {
+        Node<E> finger = tail;
+        for (int j=0;j<i+1;j++){
+            finger = finger.next();
+        }
+        return finger.value();
+    }
+
+    /*NO SE UTILIZAN ESTOS METODOS FORMAN PARTE DE LA INTERFAZ*/
     @Override
     public Iterator<E> iterator() {
         return null;
@@ -121,11 +134,6 @@ class CircularList<E> extends AbstractList<E>{
     @Override
     public void clear() {
 
-    }
-
-    @Override
-    public E get(int i) {
-        return null;
     }
 
     @Override

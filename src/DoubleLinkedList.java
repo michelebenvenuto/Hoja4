@@ -1,3 +1,4 @@
+/*Algnos metodos son tomados de los archivos de la clase*/
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
@@ -58,7 +59,7 @@ class DoublyLinkedList<E> extends AbstractList<E>{
 
     @Override
     public int size() {
-        return 0;
+        return count;
     }
 
     @Override
@@ -118,7 +119,11 @@ class DoublyLinkedList<E> extends AbstractList<E>{
 
     @Override
     public E get(int i) {
-        return null;
+        DoublyLinkedNode<E> finger = head;
+        for (int j=0;j<i;j++){
+            finger = finger.nextElement;
+        }
+        return finger.getData();
     }
 
     @Override
