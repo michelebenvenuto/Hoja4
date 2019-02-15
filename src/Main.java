@@ -9,7 +9,7 @@ java version 1.8.0_191
 
 Saul Contreras Godoy
 Michele Benevenuto
-Hoja de trabajo 2
+Hoja de trabajo 4
 Algoritmos y estructura de datos
 Main con GUI
 

@@ -3,12 +3,18 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
 
+/**
+ * List based on simple nodes
+ * @param <E> the type of objects that can be stored in the list
+ */
 class SinglyLinkedList<E> extends AbstractList<E>{
 
    protected int count; // list size
    protected Node<E> head; // ref. to first element
 
-
+    /**
+     * Constructor for a singly linked list
+     */
    public SinglyLinkedList()
    // post: generates an empty list
    {
@@ -16,6 +22,10 @@ class SinglyLinkedList<E> extends AbstractList<E>{
       count = 0;
    }
 
+    /**
+     * Method used to get the amount of objects in the list
+     * @return the number of elements in the list
+     */
    public int size()
    // post: returns number of elements in list
   {
@@ -70,6 +80,11 @@ class SinglyLinkedList<E> extends AbstractList<E>{
 
    }
 
+    /**
+     * Returns the element of a specified position
+     * @param i the position of wanted object
+     * @return the object in position i
+     */
     @Override
     public E get(int i) {
         Node<E> finger = head;
@@ -79,6 +94,10 @@ class SinglyLinkedList<E> extends AbstractList<E>{
         return finger.value();
     }
 
+    /**
+     * removes the last element of the list
+     * @return the removed element
+     */
     @Override
     public E removeLast() {
         Node<E> finger = head;

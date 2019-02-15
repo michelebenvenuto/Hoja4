@@ -4,11 +4,18 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
 
+/**
+ * Simple list with the last node pointing to the first one
+ * @param <E> the type of data stored on the list
+ */
 class CircularList<E> extends AbstractList<E>{
 
     private Node<E> tail;
     private int count;
 
+    /**
+     * Constructor for a circular list
+     */
     public CircularList()
             // pre: constructs a new circular list
             {

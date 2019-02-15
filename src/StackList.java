@@ -1,9 +1,17 @@
-
-
+/**
+ * A stack based around one of the list classes of the proyect
+ * @param <E> the type of object that is stored on the stacklist
+ */
 public class StackList<E> implements Stack<E> {
-    //TODO revisar por cambios para utilizar las listas definidas
+    /**
+     * Used to store the data
+     */
     public AbstractList<E> data;
 
+    /**
+     * Constructor used to instance of a Stacklist
+     * @param list the desired list that the Stack list will be based around
+     */
     public StackList(AbstractList<E> list){data =list;}
 
     @Override
