@@ -1,3 +1,7 @@
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.ListIterator;
+
 class CircularList<E> extends AbstractList<E>{
 
     private Node<E> tail;
@@ -59,27 +63,103 @@ class CircularList<E> extends AbstractList<E>{
             return temp.value();
             }
 
+    @Override
+    public int size() {
+        return 0;
+    }
 
-    public CircularList<E> subList(int fromIndex, int toIndex) {
-        Node<E> currentInOriginal = (fromIndex);
+    @Override
+    public Iterator<E> iterator() {
+        return null;
+    }
 
-        int count = (toIndex - fromIndex) + 1;
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
 
-        List<L> newSubList = new List<L>();
-        newSubList.head = new Node<L>(current.data);
+    @Override
+    public <T> T[] toArray(T[] ts) {
+        return null;
+    }
 
-        Node<L> lastItemInList = newSubList.head;
-        int soFar = 1;
+    @Override
+    public boolean add(E e) {
+        return false;
+    }
 
-        currentInOriginal = currentInOriginal.next;
-        while(currentInOriginal!=null && soFar<count) {
-            lastItemInList.next = new Node<L>(currentInOriginal.data);
-            listItemInList = lastItemInList.next;
+    @Override
+    public boolean remove(Object o) {
+        return false;
+    }
 
-            currentInOriginal=currentInOriginal.next;
-            soFar++;
-        }
+    @Override
+    public boolean containsAll(Collection<?> collection) {
+        return false;
+    }
 
-        return newSubList;
+    @Override
+    public boolean addAll(Collection<? extends E> collection) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(int i, Collection<? extends E> collection) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection<?> collection) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(Collection<?> collection) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public E get(int i) {
+        return null;
+    }
+
+    @Override
+    public E set(int i, E e) {
+        return null;
+    }
+
+    @Override
+    public void add(int i, E e) {
+
+    }
+
+    @Override
+    public E remove(int i) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public ListIterator<E> listIterator() {
+        return null;
+    }
+
+    @Override
+    public ListIterator<E> listIterator(int i) {
+        return null;
     }
 }
