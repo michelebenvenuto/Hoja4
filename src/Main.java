@@ -65,9 +65,10 @@ public class Main extends JFrame implements ActionListener{
 	        ArrayList<String> operation = new ArrayList<String>();
 	        int operator = 0;
 	        int operand = 0;
+
 	        try {//si no es un operando
 	            Stream<String> lines = Files.lines(
-	                    Paths.get("datos.txt"),
+	                    Paths.get("src/datos.txt"),
 	                    StandardCharsets.UTF_8
 	            );
 	            lines.forEach(s ->{

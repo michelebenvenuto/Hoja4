@@ -4,7 +4,6 @@ public class StackList<E> implements Stack<E> {
     //TODO revisar por cambios para utilizar las listas definidas
     public List<E> data;
 
-
     @Override
     public void push(E item) {
         data.add(item);

@@ -8,6 +8,12 @@ abstract class AbstractList<E>
     {
     }
 
+
+    public abstract void addLast(E value);
+
+    public abstract E removeLast();
+
+
     public boolean isEmpty()
     // post: returns true iff list has no elements
     {

@@ -1,3 +1,4 @@
+/*Algnos metodos son tomados de los archivos de la clase*/
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
@@ -6,6 +7,7 @@ class SinglyLinkedList<E> extends AbstractList<E>{
 
    protected int count; // list size
    protected Node<E> head; // ref. to first element
+
 
    public SinglyLinkedList()
    // post: generates an empty list
@@ -20,6 +22,78 @@ class SinglyLinkedList<E> extends AbstractList<E>{
     return count;
   }
 
+    public void addFirst(E value)
+  // post: value is added to beginning of list
+  {
+     // note order that things happen:
+     // head is parameter, then assigned
+     head = new Node<E>(value, head);
+     count++;
+  }
+
+  public E removeFirst()
+  // pre: list is not empty
+  // post: removes and returns value from beginning of list
+ {
+     Node<E> temp = head;
+     head = head.next(); // move head down list
+     count--;
+     return temp.value();
+  }
+
+  public E getFirst()
+  // pre: list is not empty
+  // post: returns first value in list
+  {
+      return head.value();
+  }
+
+
+
+  public void addLast(E value)
+  // post: adds value to end of list
+  {
+      // location for new value
+      Node<E> temp = new Node<E>(value,null);
+      if (head != null)
+     {
+         // pointer to possible tail
+         Node<E> finger = head;
+         while (finger.next() != null)
+         {
+             finger = finger.next();
+         }
+         finger.setNext(temp);
+      } else head = temp;
+
+	  count++;
+
+   }
+
+    @Override
+    public E get(int i) {
+        Node<E> finger = head;
+        for (int j=0;j<i;j++){
+            finger = finger.next();
+        }
+        return finger.value();
+    }
+
+    @Override
+    public E removeLast() {
+        Node<E> finger = head.next();
+        Node<E> previus = head;
+        while (finger.next() != null)
+        {
+            previus = previus.next();
+            finger = finger.next();
+        }
+        count--;
+        previus.setNext(null);
+        return finger.value();
+    }
+
+    /*Los siguientes metodos no se utlizan pero forman parte de la interfaz*/
     @Override
     public Iterator<E> iterator() {
         return null;
@@ -76,11 +150,6 @@ class SinglyLinkedList<E> extends AbstractList<E>{
     }
 
     @Override
-    public E get(int i) {
-        return null;
-    }
-
-    @Override
     public E set(int i, E e) {
         return null;
     }
@@ -114,52 +183,4 @@ class SinglyLinkedList<E> extends AbstractList<E>{
     public ListIterator<E> listIterator(int i) {
         return null;
     }
-
-    public void addFirst(E value)
-  // post: value is added to beginning of list
-  {
-     // note order that things happen:
-     // head is parameter, then assigned
-     head = new Node<E>(value, head);
-     count++;
-  }
-
-  public E removeFirst()
-  // pre: list is not empty
-  // post: removes and returns value from beginning of list
- {
-     Node<E> temp = head;
-     head = head.next(); // move head down list
-     count--;
-     return temp.value();
-  }
-
-  public E getFirst()
-  // pre: list is not empty
-  // post: returns first value in list
-  {
-      return head.value();
-  }
-
-  public void addLast(E value)
-  // post: adds value to end of list
-  {
-      // location for new value
-      Node<E> temp = new Node<E>(value,null);
-      if (head != null)
-     {
-         // pointer to possible tail
-         Node<E> finger = head;
-         while (finger.next() != null)
-         {
-                finger = finger.next();
-         }
-
-         finger.setNext(temp);
-      } else head = temp;
-
-	  count++;
-
-   }
-
 }
