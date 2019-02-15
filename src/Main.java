@@ -36,9 +36,19 @@ import javax.swing.text.MaskFormatter;
 
 public class Main extends JFrame implements ActionListener{
 
+    String[] stacks = {"VECTOR","ARRAYLIST","LIST"};
+    int stack_index = 0;
+    int list_index = 0;
+    private String stack_string =  stacks[stack_index];
+    String[] lists = {"SINGLE","DOUBLE","CIRCULAR"};
+    private String list_String = lists[stack_index];
 	/*Definimos los botones*/
+    private JButton setStack = new JButton("Cambiar Stack");
+    private JButton setList = new JButton("Cambiar Lista");
 	private JButton empezar = new JButton("Comenzar");;//boton que permitira que se realice la accion
 	private JTextArea mensaje;
+    private JTextField stack_state = new JTextField();//nos dice el stack preferido
+    private JTextField list_state = new JTextField();//nos dice el list preferido
 	private Panel panelEntrada, panelCentro;
 	private JPanel panelDeLaVentana;
 
@@ -52,13 +62,37 @@ public class Main extends JFrame implements ActionListener{
 		panelDeLaVentana = (JPanel)this.getContentPane();
 		panelEntrada = new Panel();//los siguientes paneles son para poner orden y estetica
 		panelCentro = new Panel();
-		panelEntrada.add(empezar,BoxLayout.X_AXIS);
+		setStack.setActionCommand("Stack");
+		setList.setActionCommand("Lista");
+		stack_state.setText(stack_string);
+		list_state.setText(list_String);
+		panelEntrada.add(stack_state);
+		panelEntrada.add(setStack);
+		panelEntrada.add(empezar);
+		panelEntrada.add(setList);
+		panelEntrada.add(list_state);
 		panelCentro.add(mensaje,BoxLayout.X_AXIS);
 		panelDeLaVentana.add(panelEntrada,BorderLayout.NORTH);//agreamos las ventanas a la interfaz grafica
     	panelDeLaVentana.add(panelCentro,BorderLayout.CENTER);
 	}
 
 	public void actionPerformed(ActionEvent e){
+	    if("Stack".equals((e.getActionCommand()))){
+            stack_index++;
+            if (stack_index==3){
+                stack_index=0;
+            }
+            stack_string = stacks[stack_index];
+            stack_state.setText(stack_string);
+        }
+	    if("Lista".equals((e.getActionCommand()))){
+            list_index++;
+            if (list_index==3){
+                list_index=0;
+            }
+            list_String = stacks[stack_index];
+            list_state.setText(stack_string);
+        }
 		if("empezar".equals(e.getActionCommand())){
 			MyCalculator calculator = MyCalculator.getInstance();
 	        StackVector<Integer> stack = new StackVector<Integer>();
@@ -68,7 +102,7 @@ public class Main extends JFrame implements ActionListener{
 
 	        try {//si no es un operando
 	            Stream<String> lines = Files.lines(
-	                    Paths.get("src/datos.txt"),
+	                    Paths.get("datos.txt"),
 	                    StandardCharsets.UTF_8
 	            );
 	            lines.forEach(s ->{
