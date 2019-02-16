@@ -101,14 +101,19 @@ class SinglyLinkedList<E> extends AbstractList<E>{
     @Override
     public E removeLast() {
         Node<E> finger = head;
-        Node<E> previus= head;
+        Node<E> previus= null;
         while (finger.next() != null)
         {
             previus = finger;
             finger = finger.next();
         }
+        if(previus==null){
+            this.head = null;
+        }
+        else{
+            previus.setNext(null);
+        }
         count--;
-        previus.setNext(null);
         return finger.value();
     }
 
